@@ -1,2 +1,2 @@
-# APP Completa
+# Proyecto Dispositivos Móviles
 

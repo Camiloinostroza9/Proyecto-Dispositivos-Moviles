@@ -50,93 +50,38 @@
     <!-- Views -->
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">        
+      <div class="view view-main">
         <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
-            <div class="page-content login-screen-content">
-                <div class="content-block-title">Registro</div>
- <div class="list-block">
-  <ul>
-    <!-- Text inputs -->
-    <li>
-      <div class="item-content">
-        <div class="item-media"><i class="icon f7-icons">person</i></div>
-        <div class="item-inner">
-          <div class="item-title label">Nombre</div>
-          <div class="item-input">
-            <input type="text" placeholder="Ingrese su Nombre">
+            <div class="page-content">
+                <div id="title-content" class="content-block-title">FOTOS</div>
+                <div class="card facebook-card">
+  <div class="card-content">
+    <div class="card-content-inner">
+      <p>Obtener la fecha</p>
+      <img src="res/image2.jpg" width="100%">
+      <p>Descripcion de la foto.........</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="link">VER FOTO</a>
+  </div>
+</div>  
+   
+            </div>
           </div>
         </div>
       </div>
-    </li>
-      <li>
-      <div class="item-content">
-        <div class="item-media"><i class="icon f7-icons">persons</i></div>
-        <div class="item-inner">
-          <div class="item-title label">Apellido</div>
-          <div class="item-input">
-            <input type="text" placeholder="Ingrese su Apellido">
-          </div>
-        </div>
-      </div>
-    </li>
-      <li>
-      <div class="item-content">
-        <div class="item-media"><i class="icon f7-icons">check</i></div>
-        <div class="item-inner">
-          <div class="item-title label">RUT</div>
-          <div class="item-input">
-            <input type="text" placeholder="Ingrese su Rut">
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="item-content">
-        <div class="item-media"><i class="icon f7-icons">email</i></div>
-        <div class="item-inner">
-          <div class="item-title label">E-mail</div>
-          <div class="item-input">
-            <input type="email" placeholder="E-mail">
-          </div>
-        </div>
-      </div>
-    </li>
-    <!-- Date -->
-    <li>
-      <div class="item-content">
-        <div class="item-media"><i class="icon f7-icons">calendar</i></div>
-        <div class="item-inner">
-          <div class="item-title label">Fecha de Nacimiento</div>
-          <div class="item-input">
-            <input type="date" placeholder="Fecha Nacimiento" value="0000-00-00">
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-     <br>
-     <br>
-     <br>
-     <a href="#" class="button button-big button-fill">REGISTRARSE </a>
-     <br>
-
-     <a id="volver" class="button button-big button-fill">VOLVER </a>
-     
-                </div>
-              </div>
-          </div>
-        </div>
-
-      </div>
+        
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/registro.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFkI3pnhhhjLcD-B5fYcknG_cnJi-NQR4&"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

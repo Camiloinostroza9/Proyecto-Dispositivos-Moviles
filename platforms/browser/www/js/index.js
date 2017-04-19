@@ -38,16 +38,16 @@ function enviar(){
                   window.location = "main.html";
               }else{
                   myApp.hidePreloader();
-                  myApp.alert('Datos Incorrectos','APP-TEST');
+                  myApp.alert('Datos Incorrectos','');
               }
           },
           error: function (xhr, status) {
               myApp.hidePreloader();
-              myApp.alert('Datos Incorrectos','APP-TEST');
+              myApp.alert('Datos Incorrectos','');
           }
       });
     }else{
-      myApp.alert('Debe Ingresar los datos solicitados','APP-TEST');
+      myApp.alert('Debe Ingresar los datos solicitados','');
     }
 }
 
