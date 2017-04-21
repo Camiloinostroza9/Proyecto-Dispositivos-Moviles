@@ -19,10 +19,12 @@ document.addEventListener('deviceready', function(){
 
 function cam(){
     navigator.camera.getPicture(function(photo){
+        myApp.prompt('Agregue una Descripción','REMEMBER', function (value) {
         $('#img_cam').attr('src',photo);
         myApp.popup('.popup-cam');
+            });
     }, function(error){
-        myApp.alert('Error al tomar la fotografía')
+        myApp.alert('Error al tomar la fotografía','REMEMBER')
     }, {
         quality:100,
         correctOrientation:true,
@@ -33,4 +35,28 @@ function cam(){
 
 function ver(){
     window.location = "main2.html";
+}
+
+function ver2(){
+    var myPhotoBrowserPopupDark = myApp.photoBrowser({
+    photos : [
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/1/',
+            caption: 'Caption 1 Text'
+        },
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/2/',
+            caption: 'Second Caption Text'
+        },
+        // This one without caption
+        {
+            url: 'http://lorempixel.com/1024/1024/sports/3/',
+        },
+    ],
+    theme: 'dark',
+    type: 'standalone'
+});
+$$('.pb-standalone-captions').on('click', function () {
+    myPhotoBrowserPopupDark.open();
+});
 }
