@@ -15,6 +15,9 @@ document.addEventListener('deviceready', function(){
     $('#mail').html('<b>' + localStorage.getItem('mail') + '</b>');
     $('#cam').bind('click', cam);
     $('#ver').bind('click', ver);
+    $('#video').bind('click',video);
+    $('#cerrar').bind('click',cerrar);
+    $('#vervideo').bind('click',vervideo);
 }, false);
 
 function cam(){
@@ -37,26 +40,33 @@ function ver(){
     window.location = "main2.html";
 }
 
-function ver2(){
-    var myPhotoBrowserPopupDark = myApp.photoBrowser({
-    photos : [
-        {
-            url: 'http://lorempixel.com/1024/1024/sports/1/',
-            caption: 'Caption 1 Text'
-        },
-        {
-            url: 'http://lorempixel.com/1024/1024/sports/2/',
-            caption: 'Second Caption Text'
-        },
-        // This one without caption
-        {
-            url: 'http://lorempixel.com/1024/1024/sports/3/',
-        },
-    ],
-    theme: 'dark',
-    type: 'standalone'
+function video(){
+    
+    var videoGrabado = function(mediaFiles){
+        var i,path,len;
+        for(i=0,len = mediaFiles.length;i<len;i += 1){
+            path = mediaFiles[i].fullPath;   
+        }
+        
+    } ;
+    
+    var videoError = function(error){
+        myApp.alert('Error al grabar el video','REMEMBER')
+    };
+    
+    navigator.device.capture.captureVideo(videoGrabado,videoError, { duration:15});
+}
+
+function cerrar(){
+    $$('.confirm-ok').on('click', function () {
+    myApp.confirm('Está seguro de cerrar sesión','REMEMBER', function () {
+       window.location = "index.html";
+    });
+         
 });
-$$('.pb-standalone-captions').on('click', function () {
-    myPhotoBrowserPopupDark.open();
-});
+    
+}
+
+function vervideo(){
+    window.location = "mainvideo.html";
 }

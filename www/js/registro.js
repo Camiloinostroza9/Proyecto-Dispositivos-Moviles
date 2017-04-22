@@ -12,6 +12,7 @@ var mainView = myApp.addView('.view-main', {
 
 document.addEventListener('deviceready', function(){
     $("#volver").bind('click', volver);
+    $("#reg").bind('click', exito);
     
 }, false);
 
@@ -19,4 +20,8 @@ document.addEventListener('deviceready', function(){
 
 function volver(){
     window.location = "index.html";
+}
+
+function exito(){
+    window.location = "registroexitoso.html";
 }
