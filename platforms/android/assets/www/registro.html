@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
@@ -67,7 +47,7 @@
         <div class="item-inner">
           <div class="item-title label">Nombre:</div>
           <div class="item-input">
-            <input type="text" placeholder="Ingrese su Nombre" maxlength="10">
+            <input type="text"  name ="nombre" placeholder="Ingrese su Nombre" maxlength="15" >
           </div>
         </div>
       </div>
@@ -78,7 +58,7 @@
         <div class="item-inner">
           <div class="item-title label">Apellido:</div>
           <div class="item-input">
-            <input type="text" placeholder="Ingrese su Apellido" maxlength="10">
+            <input type="text" placeholder="Ingrese su Apellido" maxlength="20" required>
           </div>
         </div>
       </div>
@@ -89,7 +69,7 @@
         <div class="item-inner">
           <div class="item-title label">E-mail:</div>
           <div class="item-input">
-            <input type="email" placeholder="E-mail">
+            <input type="email" placeholder="E-mail" required>
           </div>
         </div>
       </div>
@@ -100,7 +80,7 @@
         <div class="item-inner">
           <div class="item-title label"> Clave:</div>
           <div class="item-input">
-            <input type="password" placeholder="Ingrese una Clave" maxlength="10">
+            <input type="password" placeholder="Ingrese una Clave" maxlength="10" required>
           </div>
         </div>
       </div>
@@ -112,7 +92,7 @@
       <div class="row">
                     <!-- Each "cell" has col-[widht in percents] class -->
                     <div class="col-10"></div>
-                    <div class="col-80"><a id="reg" class="button button-fill color-green">Registrarse en REMEMBER</a></div>
+                    <div class="col-80"><a id="reg" class="button button-fill color-green" >Registrarse en REMEMBER</a></div>
                     <div class="col-10"></div>
       </div>
      <br>
@@ -123,7 +103,7 @@
                     <div class="col-10"></div>
       </div>
      
-                </div>
+</div>
               </div>
           </div>
         </div>
@@ -134,6 +114,7 @@
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
+    <script type="text/javascript" src="js/validaciones.js"></script>
 </body>
 
 </html>

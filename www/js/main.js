@@ -15,6 +15,7 @@ document.addEventListener('deviceready', function(){
     $('#mail').html('<b>' + localStorage.getItem('mail') + '</b>');
     $('#cam').bind('click', cam);
     $('#ver').bind('click', ver);
+    $('#video').bind('click',video);
 }, false);
 
 function cam(){
@@ -59,4 +60,21 @@ function ver2(){
 $$('.pb-standalone-captions').on('click', function () {
     myPhotoBrowserPopupDark.open();
 });
+}
+
+function video(){
+    
+    var videoGrabado = function(mediaFiles){
+        var i,path,len;
+        for(i=0,len = mediaFiles.length;i<len;i += 1){
+            path = mediaFiles[i].fullPath;   
+        }
+        
+    } ;
+    
+    var videoError = function(error){
+        myApp.alert('Error al grabar el video','REMEMBER')
+    };
+    
+    navigator.device.capture.captureVideo(videoGrabado,videoError, { duration:15});
 }
