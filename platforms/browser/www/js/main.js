@@ -16,8 +16,11 @@ document.addEventListener('deviceready', function(){
     $('#cam').bind('click', cam);
     $('#ver').bind('click', ver);
     $('#video').bind('click',video);
+<<<<<<< HEAD
     $('#cerrar').bind('click',cerrar);
     $('#vervideo').bind('click',vervideo);
+=======
+>>>>>>> origin/master
 }, false);
 
 function cam(){
@@ -64,9 +67,29 @@ function cerrar(){
     });
          
 });
+<<<<<<< HEAD
     
 }
 
 function vervideo(){
     window.location = "mainvideo.html";
+=======
+}
+
+function video(){
+    
+    var videoGrabado = function(mediaFiles){
+        var i,path,len;
+        for(i=0,len = mediaFiles.length;i<len;i += 1){
+            path = mediaFiles[i].fullPath;   
+        }
+        
+    } ;
+    
+    var videoError = function(error){
+        myApp.alert('Error al grabar el video','REMEMBER')
+    };
+    
+    navigator.device.capture.captureVideo(videoGrabado,videoError, { duration:15});
+>>>>>>> origin/master
 }
